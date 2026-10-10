@@ -4,10 +4,28 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: white;
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  max-height: 1300px;
+  margin: 0 auto;
+  padding-top: 30px;
+  align-self: center;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* fonts added from google by downloading and creating a folder*/
 @font-face {
   font-family: "Poppins";
   src: url("fonts/Poppins-Regular.ttf");
-  font-weight: 700;
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
@@ -28,23 +46,7 @@
   font-display: swap;
 }
 
-body {
-  background-color: white;
-  font-family: "Poppins", sans-serif;
-  width: 100%;
-  max-width: 600px;
-  height: 100%;
-  max-height: 1300px;
-  margin: 0 auto;
-  padding-top: 30px;
-  align-self: center;
-}
-
-img {
-  width: 100%;
-  height: auto;
-}
-
+/* header and navigation specific styles */
 .header {
   width: 100%;
 }
@@ -56,6 +58,12 @@ img {
   grid-template-columns: 1fr auto;
   align-items: center;
   padding: 40px 30px 30px;
+}
+
+.navigation a[aria-current="page"] {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
 }
 
 .logo {
@@ -90,29 +98,6 @@ img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-}
-
-.nav-list {
-  grid-column: 1 / -1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  list-style: none;
-  padding: 0;
-  margin: 20px 0 30px;
-  color: black;
-}
-.nav-list a {
-  color: black;
-  text-decoration: none;
-  font-family: "DM Sans", sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.nav-list a:hover {
-  text-decoration: underline;
 }
 
 .dropbtn {
@@ -172,6 +157,30 @@ img {
 .dropdown-ham-menu:hover .dropdown-content,
 .dropdown-ham-menu:focus-within .dropdown-content {
   display: block;
+}
+
+.nav-list {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 30px;
+  color: black;
+}
+
+.nav-list a {
+  color: black;
+  text-decoration: none;
+  font-family: "DM Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.nav-list a:hover {
+  text-decoration: underline;
 }
 
 /* home.html specific styling */
@@ -394,6 +403,9 @@ img {
   object-fit: contain;
 }
 
+.icon-grid img.small-logo {
+  transform: scale(1.4);
+}
 /* projects.html specific styling */
 .projects-mobile {
   padding: 60px 30px 20px;
@@ -443,7 +455,8 @@ img {
 
 .project-description {
   color: #666;
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: 300;
   line-height: 1.5;
   margin-bottom: 20px;
 }
@@ -493,6 +506,16 @@ img {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+}
+
+/* make focus styles more visible in light mode */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #42446e;
+  outline-offset: 3px;
 }
 
 /* desktop version using media query */
@@ -598,7 +621,7 @@ img {
     padding: 0;
     margin-bottom: 30px;
     font-size: 40px;
-    font-weight: 900 bolder;
+    font-weight: 900;
     letter-spacing: 0;
   }
 
@@ -692,9 +715,17 @@ img {
   .dropbtn img {
     filter: invert(1);
   }
+  /* make focus styles more visible in dark mode */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    outline-color: white;
+  }
 }
 
-/* added separately so that the logo works in light and dark mode */
+/* added separately so that the github logo works in light and dark mode */
 @media (min-width: 768px) and (prefers-color-scheme: dark) {
   .tech-page img.github-logo {
     filter: invert(1);
