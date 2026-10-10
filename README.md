@@ -6,11 +6,11 @@ Sedan hittade jag en bild för att lägga till den på startsidan och började a
 
 <!-- Semantik -->
 
-På varje HTML-sida finns ett sidhuvud <header> med en egengjord logotyp (aks007), navigationen och en dropdown-meny med en knapp <button>. Jag ändrade länkarna till sociala medier från Pawans version för att länka till mina egna konton.
-Jag använde <nav> för att samla navigationslänkar och markera dem som sidans navigationen. Det gör strukturen tydligare, även för skärmläsare. Med CSS kunde jag senare ändra navigationen från vertikallt till horisontell.
-Sedan använde jag <div> för att gruppera olika delar, som ikonerna för sociala medier och styra deras placering med CSS. Jag valde <div> eftersom jag behövde en behållare för layouten utan nagån särskild semantisk betydelse.
+På varje HTML-sida finns ett sidhuvud "header" med en egengjord logotyp (aks007), navigationen och en dropdown-meny med en knapp "button". Jag ändrade länkarna till sociala medier från Pawans version för att länka till mina egna konton.
+Jag använde "nav" för att samla navigationslänkar och markera dem som sidans navigationen. Det gör strukturen tydligare, även för skärmläsare. Med CSS kunde jag senare ändra navigationen från vertikallt till horisontell.
+Sedan använde jag "div" för att gruppera olika delar, som ikonerna för sociala medier och styra deras placering med CSS. Jag valde "div" eftersom jag behövde en behållare för layouten utan nagån särskild semantisk betydelse.
 Jag har lagt till en main-tag efter sidhuvudet på alla HTML-sidor för att hålla strukturen enhetlig. Main-taggen blev också tillagd för att definera huvudinnehåll på sidorna.
-I slutet av varje HTML-sida finns en sidofot <footer> som centreras på samma sätt som i skissen, men jag har lagt till min egen touch i texten.
+I slutet av varje HTML-sida finns en sidofot "footer" som centreras på samma sätt som i skissen, men jag har lagt till min egen touch i texten.
 
 <!-- Layout -->
 
